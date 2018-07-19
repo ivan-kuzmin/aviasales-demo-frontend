@@ -26,9 +26,20 @@ const ContainerGrid = styled(Grid)`
 	height: 100%;
 `;
 
-const Logo = styled.img`
+const Logo = styled.div`
 	position: absolute;
+	display: flex;
 	top: 12px;
+`;
+
+const LogoText = styled.span`
+	color: white;
+	margin: auto 12px;
+	font-size: 20px;
+	display: none;
+	@media (min-width: 768px) {
+		display: inline;
+	}
 `;
 
 const ContentRow = styled(Row)`
@@ -41,11 +52,14 @@ const ContentCol = styled(Col)`
 
 const Title = styled.h1`
 	font-size: 20px;
+	line-height: 23px;
 	margin-bottom: 16px;
 	margin-left: -8px;
 	margin-right: -8px;
 	@media (min-width: 768px) {
 		font-size: 32px;
+		margin-bottom: 8px;
+		line-height: 48px;
 	}
 	@media (min-width: 1440px) {
 		font-size: 40px;
@@ -53,8 +67,17 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
-	font-size: 24px;
+	font-size: 20px;
+	line-height: 23px;
+	margin-top: 0;
 	display: none;
+	@media (min-width: 768px) {
+		display: block;
+		margin-bottom: 40px;
+	}
+	@media (min-width: 1440px) {
+		font-size: 24px;
+	}
 `;
 
 class FirstBlock extends Component {
@@ -63,7 +86,10 @@ class FirstBlock extends Component {
 			<Background>
 				<ContainerGrid>
 					<Row>
-						<Logo src={logo} alt="Logo" />
+						<Logo>
+							<img src={logo} alt="Logo" />
+							<LogoText>aviasales</LogoText>
+						</Logo>
 					</Row>
 					<ContentRow center="xs" middle="xs">
 						<ContentCol xs={12} md={10}>

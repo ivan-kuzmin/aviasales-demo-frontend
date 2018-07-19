@@ -36,7 +36,7 @@ class Search extends Component {
 	render() {
 		return (
 			<BigRow>
-				<SearchCol xs={12}>
+				<SearchCol xs={12} md={6} lg>
 					<SearchRow between="xs" middle="xs">
 						<Col>Москва</Col>
 						<Col>
@@ -44,12 +44,12 @@ class Search extends Component {
 						</Col>
 					</SearchRow>
 				</SearchCol>
-				<SearchCol xs={12}>
+				<SearchCol xs={12} md={6} lg>
 					<SearchRow between="xs">
 						<Col><GrayText>Город прибытия</GrayText></Col>
 					</SearchRow>
 				</SearchCol>
-				<SearchCol xs={6}>
+				<SearchCol xs={6} md={3} lg={2}>
 					<SearchRow between="xs">
 						<Col><GrayText>Туда</GrayText></Col>
 						<Col>
@@ -57,7 +57,7 @@ class Search extends Component {
 						</Col>
 					</SearchRow>
 				</SearchCol>
-				<SearchCol xs={6}>
+				<SearchCol xs={6} md={3} lg={2}>
 					<SearchRow between="xs">
 						<Col><GrayText>Обратно</GrayText></Col>
 						<Col>
@@ -65,7 +65,7 @@ class Search extends Component {
 						</Col>
 					</SearchRow>
 				</SearchCol>
-				<SearchCol xs={12}>
+				<SearchCol xs={12} md={6} lg>
 					<SearchRow between="xs">
 						<Col>1 пассажир, <GrayText>эконом</GrayText></Col>
                         <Col>
